@@ -10,6 +10,7 @@ class ExpenseTrackerApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Persnal Expense Tracker',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -359,12 +360,3 @@ class ExpenseChartData {
 
   ExpenseChartData(this.type, this.amount);
 }
-//```
-//
-//In this code:
-//
-//- `_loadData()` is called in `initState()` to load data from SharedPreferences when the app starts.
-//- `_saveData()` is called whenever data is modified to save the updated data to SharedPreferences.
-//- Data is stored and retrieved using SharedPreferences using keys `'totalIncome'` and `'expenses'`.
-//- Each expense is saved as a string in the format `'name,amount,category,timestamp'`, separated by `|` character.
-//- `getRemainingAmount()` now calculates the remaining income using the loaded total income and expenses.
